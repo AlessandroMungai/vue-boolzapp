@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(217,219,211);
+    background: linear-gradient(0deg, rgba(217,219,211,1) 85%, rgba(0,150,136,1) 85%); 
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container-app {
+    width: 1000px;
+    height: 700px;
+    background-color: aquamarine;
+    display: flex;
+}
+
+.wapp-cont {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside {
+    width: 300px;
+    height: 100%;
+    background-color: blueviolet;
+}
+
+.right {
+    width: 700px;
+    height: 100%;
+    background-color: burlywood;
+}
