@@ -29,7 +29,7 @@ body {
 .aside {
     width: 400px;
     height: 100%;
-    background-color: blueviolet;
+    background-color: white;
 }
 
 .right {
@@ -95,4 +95,26 @@ body {
 .underline-text {
     text-decoration: underline;
     color: #6587A0;
+}
+
+.input-section {
+    padding: 5px;
+    position: relative;
+    background-color: #edeaea;
+}
+
+.input-section input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    border: none;
+}
+
+.input-section i {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #B1B1B1
 }
