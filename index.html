@@ -151,37 +151,41 @@
 
                         </div>
 
-                        <main class="main-right-section">
+                        <div class="main-right-section">
 
-                            <div class="message-right">
+                            <main class="chat-section" v-for="msg in contacts[count].messages">
 
-                                <div class="sent">
+                                <div v-if="msg.status === 'sent'" class="message-right">
 
-                                    Hai portato a spasso il cane?
+                                    <div class="sent">
 
-                                    <span class="sent-message-time">
-                                        15:30
-                                    </span>
+                                        {{msg.message}}
 
-                                </div>
+                                        <span class="sent-message-time">
+                                            15:30
+                                        </span>
 
-                            </div>
-
-                            <div class="message-left">
-
-                                <div class="recived">
-
-                                    Tutto fatto!
-
-                                    <span class="recived-message-time">
-                                        15:40
-                                    </span>
+                                    </div>
 
                                 </div>
 
-                            </div>
-                            
-                        </main>
+                                <div v-else class="message-left">
+
+                                    <div class="recived">
+
+                                        {{msg.message}}
+
+                                        <span class="recived-message-time">
+                                            15:40
+                                        </span>
+
+                                    </div>
+
+                                </div>
+                                
+                            </main>
+
+                        </div>
 
                         <footer class="footer-right-section">
 
