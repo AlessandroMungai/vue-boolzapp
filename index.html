@@ -81,7 +81,10 @@
 
                         <div class="main-aside">
 
-                            <div class="contact" v-for="(singleContact, index) in contacts">
+                            <div class="contact"
+                            v-for="(singleContact, index) in contacts" 
+                            @click="clickedContact(index)"
+                            :class="index == count ? 'clicked': ''">
 
                                 <div class="contact-info">
 

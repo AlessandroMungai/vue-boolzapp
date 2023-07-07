@@ -131,6 +131,7 @@ body {
     justify-content: space-between;
     padding: 5px;
     border-bottom: 1px solid #d6d4d4;
+    cursor: pointer;
 }
 
 .contact img {
@@ -285,3 +286,6 @@ body {
     outline: none;;
 }
 
+.clicked {
+    background-color: #dddddd;
+}

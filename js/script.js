@@ -219,5 +219,9 @@ createApp ({
         //ritorno il valore delle variabili
         return `${hours}:${minutes}`;
     },
+
+        clickedContact(i) {
+           this.count = i; 
+        }
   },
 }).mount('#app');
