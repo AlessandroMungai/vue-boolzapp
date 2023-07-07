@@ -3,9 +3,8 @@ const { createApp } = Vue;
 createApp ({
     data() {
         return {
-            
             count: 0,
-
+            newMessage: '',
             contacts: [
                 {
                     name: 'Teo',
@@ -17,7 +16,6 @@ createApp ({
                             date: '10/01/2020 15:30:55',
                             message: 'Hai portato a spasso il cane?',
                             status: 'sent'
-
                         },
 
                         {
@@ -205,23 +203,36 @@ createApp ({
 
         formatTime(dateTime) {
 
-        // creazione di un nuovo oggetto date
-        const dateMessage = new Date(dateTime);
-        /*attraverso .getHours().toString().padStart farò:
-        .getHours()= restituisce le ore nell'intervallo (0/23)
-        .toString()= trasforma tutto in stringa
-        .padStart()= decidiamo la lunghezza dei caratteri e aggiungiamo lo '0' come padding.
-         Se la stringa delle ore ha meno di 2 caratteri, il metodo padStart()
-        aggiungerà uno o più zeri all'inizio della stringa per raggiungere una lunghezza di 2 caratteri.
-        */
-        const hours = dateMessage.getHours().toString().padStart(2, '0');
-        const minutes = dateMessage.getMinutes().toString().padStart(2, '0');
-        //ritorno il valore delle variabili
-        return `${hours}:${minutes}`;
-    },
+            console.log('dateTime: ', dateTime)
+
+            // creazione di un nuovo oggetto date
+            const dateMessage = new Date(dateTime);
+            /*attraverso .getHours().toString().padStart farò:
+            .getHours()= restituisce le ore nell'intervallo (0/23)
+            .toString()= trasforma tutto in stringa
+            .padStart()= decidiamo la lunghezza dei caratteri e aggiungiamo lo '0' come padding.
+            Se la stringa delle ore ha meno di 2 caratteri, il metodo padStart()
+            aggiungerà uno o più zeri all'inizio della stringa per raggiungere una lunghezza di 2 caratteri.
+            */
+            const hours = dateMessage.getHours().toString().padStart(2, '0');
+            const minutes = dateMessage.getMinutes().toString().padStart(2, '0');
+            //ritorno il valore delle variabili
+            return `${hours}:${minutes}`;
+
+        },
 
         clickedContact(i) {
            this.count = i; 
-        }
-  },
+        },
+
+        addNewMessage() {
+            this.contacts[this.count].messages.push({
+                message:this.newMessage, 
+                status:'sent'
+            });
+            
+            this.newMessage = '';
+        },
+        
+    },
 }).mount('#app');

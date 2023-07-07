@@ -202,7 +202,11 @@
 
                             <div class="input-section">
 
-                                <input type="text" placeholder="scrivi un messaggio">
+                                <input 
+                                @keyup.enter="addNewMessage()"
+                                v-model="newMessage"
+                                type="text" 
+                                placeholder="scrivi un messaggio">
 
                             </div>
 
