@@ -12,7 +12,6 @@
 body {
     background: rgb(217,219,211);
     background: linear-gradient(0deg, rgba(217,219,211,1) 85%, rgba(0,150,136,1) 85%); 
-    background-repeat: no-repeat;
     height: 100vh;
 }
 
@@ -43,6 +42,61 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.main-right-section {
+    margin: 60px;
+}
+
+.message-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.message-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sent {
+    background-color: #D5F9BA;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+    text-align: left;
+    position: relative;
+}
+
+.recived {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+    text-align: left;
+    position: relative;
+}
+
+.sent-message-time {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 0.6rem;
+    padding-right: 4px;
+    color: #B1B1B1;
+}
+
+.recived-message-time {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 0.6rem;
+    padding-right: 4px;
+    color: #B1B1B1;
+}
+
 
 /*****ASIDE*****/
 
