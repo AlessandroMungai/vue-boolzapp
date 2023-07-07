@@ -20,7 +20,7 @@
 
             <div class="wapp-cont">
 
-                <div id="app" class="container-app">
+                <div class="container-app">
 
                     <section class="aside">
 
@@ -79,6 +79,40 @@
 
                         </div>
 
+                        <div class="main-aside">
+
+                            <div class="contact" v-for="(singleContact, index) in contacts">
+
+                                <div class="contact-info">
+
+                                    <img :src="singleContact.avatar" :alt="singleContact.name">
+
+                                    <div class="contact-text">
+
+                                        <p>
+                                            {{singleContact.name}}
+                                        </p>
+
+                                        <p id="ultimate-sent-message">
+                                            Ultimo messaggio inviato
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="last-action-time">
+
+                                    <span>
+                                        12:00
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
                     </section>
 
                     <section class="right-container">
@@ -89,7 +123,7 @@
 
                                 <div>
 
-                                    <img src="img/avatar_4.jpg" alt="img-account">
+                                    <img src="img/avatar_1.jpg" alt="img-account">
                                     
                                 </div>
 
@@ -119,8 +153,6 @@
 
                         <main class="main-right-section">
                             
-                            
-
                         </main>
 
                         <footer class="footer-right-section">

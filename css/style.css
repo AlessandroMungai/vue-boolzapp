@@ -127,6 +127,42 @@ body {
     color: #B1B1B1
 }
 
+.contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #d6d4d4;
+}
+
+.contact img {
+    width: 50px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.contact-info {
+    display: flex;
+    
+}
+
+.contact-text {
+    padding: 5px;
+}
+
+.contact-text p {
+    font-size: 0.8rem;
+}
+
+.last-action-time span {
+    font-size: 0.7rem;
+    color: #8f8b8b;
+}
+
+#ultimate-sent-message {
+    color: #8f8b8b;
+    font-size: 0.7rem;
+}
+
 /*****RIGHT SECTION*****/
 
 .header-right-section {
@@ -156,6 +192,7 @@ body {
 .header-right-section-text .ultimate-access-style {
     color: #8f8b8b;
     font-size: 0.7rem;
+    font-weight: 600;
 }
 
 .icon-right-section i{
@@ -197,3 +234,4 @@ body {
 *:focus {
     outline: none;;
 }
+
