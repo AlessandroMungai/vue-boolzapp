@@ -199,5 +199,25 @@ createApp ({
                 }
             ]
         }
-    }
+    },
+
+      methods: {
+
+        formatTime(dateTime) {
+
+        // creazione di un nuovo oggetto date
+        const dateMessage = new Date(dateTime);
+        /*attraverso .getHours().toString().padStart farò:
+        .getHours()= restituisce le ore nell'intervallo (0/23)
+        .toString()= trasforma tutto in stringa
+        .padStart()= decidiamo la lunghezza dei caratteri e aggiungiamo lo '0' come padding.
+         Se la stringa delle ore ha meno di 2 caratteri, il metodo padStart()
+        aggiungerà uno o più zeri all'inizio della stringa per raggiungere una lunghezza di 2 caratteri.
+        */
+        const hours = dateMessage.getHours().toString().padStart(2, '0');
+        const minutes = dateMessage.getMinutes().toString().padStart(2, '0');
+        //ritorno il valore delle variabili
+        return `${hours}:${minutes}`;
+    },
+  },
 }).mount('#app');

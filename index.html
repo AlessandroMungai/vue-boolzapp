@@ -162,7 +162,7 @@
                                         {{msg.message}}
 
                                         <span class="sent-message-time">
-                                            15:30
+                                            {{formatTime(msg.date) }}
                                         </span>
 
                                     </div>
@@ -176,7 +176,9 @@
                                         {{msg.message}}
 
                                         <span class="recived-message-time">
-                                            15:40
+
+                                            {{formatTime(msg.date) }}
+
                                         </span>
 
                                     </div>
