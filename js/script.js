@@ -224,7 +224,16 @@ createApp ({
         clickedContact(i) {
            this.count = i; 
         },
-        
+
+        replaceAvatar(index) {
+            const originalAvatar = this.contacts[this.count].avatar;
+            return originalAvatar;
+        },
+
+        replaceName(index) {
+            const originalName = this.contacts[this.count].name;
+            return originalName;
+        },
 
         addNewMessage() {
             this.contacts[this.count].messages.push({
