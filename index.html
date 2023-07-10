@@ -89,38 +89,41 @@
                             @click="clickedContact(index)"
                             :class="index == count ? 'clicked': ''">
 
-                                <div class="contact-info" 
-                                v-if="singleContact.visible"
-                                :class="singleContact.visible ? '': 'change-display'">
+                                <div class="containerContact"
+                                v-if="singleContact.visible">
 
-                                    <img :src="singleContact.avatar" :alt="singleContact.name">
+                                    <div class="contact-info" >
 
-                                    <div class="contact-text">
+                                        <img :src="singleContact.avatar" :alt="singleContact.name">
 
-                                        <div>
+                                        <div class="contact-text">
 
-                                            <p>
-                                                {{singleContact.name}}
-                                            </p>
+                                            <div>
 
-                                            <p id="ultimate-sent-message">
-                                                Ultimo messaggio inviato
-                                            </p>
-                                            
+                                                <p>
+                                                    {{singleContact.name}}
+                                                </p>
+
+                                                <p id="ultimate-sent-message">
+                                                    Ultimo messaggio inviato
+                                                </p>
+                                                
+                                            </div>
+
                                         </div>
-                                        
-                                    </div>
 
-                                    <div class="last-action-time">
+                                        <div class="last-action-time">
 
-                                        <span>
-                                            12:00
-                                        </span>
-    
+                                            <span>
+                                                12:00
+                                            </span>
+        
+                                        </div>
+
                                     </div>
 
                                 </div>
-
+                                
                             </div>
 
                         </div>

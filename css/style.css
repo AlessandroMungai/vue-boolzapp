@@ -127,11 +127,13 @@ body {
 }
 
 .contact {
-    display: flex;
-    justify-content: space-between;
     padding: 5px;
     cursor: pointer;
     position: relative;
+}
+
+.containerContact {
+    border-bottom: 1px solid #d8d8d8;
 }
 
 .contact img {
@@ -142,7 +144,6 @@ body {
 
 .contact-info {
     display: flex;
-    border-bottom: 1px solid #d6d4d4;
 }
 
 .contact-text {
@@ -156,10 +157,11 @@ body {
 }
 
 .last-action-time span {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: #8f8b8b;
     position: absolute;
-    right: 2px;
+    right: 5px;
+    top: 10px;
 }
 
 #ultimate-sent-message {
