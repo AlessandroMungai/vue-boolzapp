@@ -130,8 +130,8 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 5px;
-    border-bottom: 1px solid #d6d4d4;
     cursor: pointer;
+    position: relative;
 }
 
 .contact img {
@@ -142,11 +142,13 @@ body {
 
 .contact-info {
     display: flex;
-    
+    border-bottom: 1px solid #d6d4d4;
 }
 
 .contact-text {
     padding: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .contact-text p {
@@ -156,6 +158,8 @@ body {
 .last-action-time span {
     font-size: 0.7rem;
     color: #8f8b8b;
+    position: absolute;
+    right: 2px;
 }
 
 #ultimate-sent-message {
@@ -288,4 +292,8 @@ body {
 
 .clicked {
     background-color: #dddddd;
+}
+
+.change-display {
+    display: none;
 }

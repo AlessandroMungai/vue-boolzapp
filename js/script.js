@@ -5,6 +5,7 @@ createApp ({
         return {
             count: 0,
             newMessage: '',
+            contactSearch: '',
             contacts: [
                 {
                     name: 'Teo',
@@ -203,8 +204,6 @@ createApp ({
 
         formatTime(dateTime) {
 
-            console.log('dateTime: ', dateTime)
-
             // creazione di un nuovo oggetto date
             const dateMessage = new Date(dateTime);
             /*attraverso .getHours().toString().padStart farò:
@@ -225,12 +224,12 @@ createApp ({
            this.count = i; 
         },
 
-        replaceAvatar(index) {
+        replaceAvatar() {
             const originalAvatar = this.contacts[this.count].avatar;
             return originalAvatar;
         },
 
-        replaceName(index) {
+        replaceName() {
             const originalName = this.contacts[this.count].name;
             return originalName;
         },
@@ -257,5 +256,22 @@ createApp ({
             
             this.newMessage = '';
         },
+
+        filteringContact(stringToSearch) {
+            this.contacts.forEach((contact) => {
+                console.log(contact)
+                if (contact.name.toLowerCase().startsWith(stringToSearch.toLowerCase().trim()))
+                {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                }
+            });
+
+        },
+        
     },
 }).mount('#app');
+
+
+
