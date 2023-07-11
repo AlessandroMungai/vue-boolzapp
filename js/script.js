@@ -260,7 +260,7 @@ createApp ({
         filteringContact(stringToSearch) {
             this.contacts.forEach((contact) => {
                 console.log(contact)
-                if (contact.name.toLowerCase().startsWith(stringToSearch.toLowerCase().trim()))
+                if (contact.name.toLowerCase().includes(stringToSearch.toLowerCase().trim()))
                 {
                     contact.visible = true;
                 } else {

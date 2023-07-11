@@ -130,6 +130,7 @@ body {
     padding: 5px;
     cursor: pointer;
     position: relative;
+    transition: all 0.5s ease-in-out
 }
 
 .containerContact {
@@ -144,6 +145,10 @@ body {
 
 .contact-info {
     display: flex;
+}
+
+.contact-info:hover {
+    background-color: #dddddd;
 }
 
 .contact-text {
