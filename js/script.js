@@ -3,8 +3,11 @@ const { createApp } = Vue;
 createApp ({
     data() {
         return {
+            //indice attivo
             count: 0,
+            //inserimento dinamico da input
             newMessage: '',
+            //inserimento dinamico da input
             contactSearch: '',
             contacts: [
                 {
@@ -219,21 +222,21 @@ createApp ({
             return `${hours}:${minutes}`;
 
         },
-
+        //funzione per cliccare l'indice attivo
         clickedContact(i) {
            this.count = i; 
         },
-
+        //funzione per fare il replace dell'imagine in un altra sezione
         replaceAvatar() {
             const originalAvatar = this.contacts[this.count].avatar;
             return originalAvatar;
         },
-
+        //funzione per fare il replace del nome in un altra sezione
         replaceName() {
             const originalName = this.contacts[this.count].name;
             return originalName;
         },
-
+        //funzione per aggiungere un nuovo messaggio alla chat
         addNewMessage() {
             this.contacts[this.count].messages.push({
                 message:this.newMessage,
@@ -242,11 +245,11 @@ createApp ({
             });
             
             this.newMessage = '';
-
+            //impostato timing per l'avvio della funzione "addNewMessageBot"
             setTimeout(this.addNewMessageBot, 2000);
 
         },
-
+        //funzione per il messaggio automatico
         addNewMessageBot() {
             this.contacts[this.count].messages.push({
                 message: 'ok',
@@ -256,11 +259,11 @@ createApp ({
             
             this.newMessage = '';
         },
-
-        filteringContact(stringToSearch) {
+        //funzione per il filtraggio dei contatti
+        filteringContact(contactToSearch) {
             this.contacts.forEach((contact) => {
                 console.log(contact)
-                if (contact.name.toLowerCase().includes(stringToSearch.toLowerCase().trim()))
+                if (contact.name.toLowerCase().includes(contactToSearch.toLowerCase().trim()))
                 {
                     contact.visible = true;
                 } else {
@@ -268,6 +271,8 @@ createApp ({
                 }
             });
 
+            //toLowerCase() -> converte una stringa in caratteri minuscoli
+            //startWidth() -> serve per determinare se una stringa inzia con...
         },
         
     },
